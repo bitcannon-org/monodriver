@@ -1,0 +1,31 @@
+{
+  "name": "monodriver",
+  "version": "1.0.0",
+  "description": "A package aiming to allow swappable databases for nodejs.",
+  "keywords": [
+    "monodriver",
+    "database",
+    "driver",
+    "db"
+  ],
+  "homepage": "https://github.com/bitcannon-org/monodriver#readme",
+  "bugs": {
+    "url": "https://github.com/bitcannon-org/monodriver/issues"
+  },
+  "license": "MIT",
+  "author": "Stephen Smith <stephen304@gmail.com>",
+  "files": ["lib"],
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bitcannon-org/monodriver.git"
+  },
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "dependencies": {
+  }
+}
