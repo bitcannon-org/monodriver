@@ -14,7 +14,11 @@
   },
   "license": "MIT",
   "author": "Stephen Smith <stephen304@gmail.com>",
-  "files": ["lib"],
+  "files": [
+    "lib",
+    "adapters",
+    "test"
+  ],
   "main": "lib/index.js",
   "directories": {
     "lib": "lib"
@@ -24,8 +28,12 @@
     "url": "git+https://github.com/bitcannon-org/monodriver.git"
   },
   "scripts": {
-    "test": "node test/test.js"
+    "test": "istanbul cover _mocha -- test test/adapters"
   },
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
+    "istanbul": "^0.4.2",
+    "mocha": "^2.3.4",
+    "should": "^8.1.1"
   }
 }

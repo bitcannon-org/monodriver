@@ -1,15 +1,15 @@
-var Monodriver = require('../');
-console.log(Monodriver.getDrivers()); // [ 'example', 'mongodb' ]
-try {
-  var driver = new Monodriver("somedriver");
-} catch (err) {
-  console.log("Caught error when using nonexistant driver: " + err); //Error: Driver not supported by monodriver.
-}
-try {
-  var driver = new Monodriver("mongodb");
-} catch (err) {
-  console.log("Caught error when required config options left out: " + err); // Error: Config not provided: url
-}
-var driver = new Monodriver("mongodb", {url: "localhost:1234"}); // started with config: {"url":"localhost:1234"}
-console.log("Current driver is: " + driver.getCurrentDriverName()); // mongodb
-var driver = new Monodriver("example"); // started <driver name here>
+var should = require('should');
+describe("Monodriver", function() {
+  var Monodriver;
+  before(function() {
+    Monodriver = require('../');
+  });
+  it("should be a function", function() {
+    Monodriver.should.be.a.Function();
+  });
+  it("should have adapters available", function() {
+    var adapters = Monodriver.getAdapters();
+    adapters.should.be.an.Array();
+    adapters.length.should.be.greaterThan(0, "expected adapters to have 1 or more adapters");
+  });
+});
