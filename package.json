@@ -36,6 +36,7 @@
     "istanbul": "^0.4.2",
     "mocha": "^2.3.4",
     "mocha-lcov-reporter": "^1.0.0",
+    "mongodb": "^2.1.4",
     "should": "^8.1.1"
   }
 }
