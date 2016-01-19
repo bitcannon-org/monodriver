@@ -28,12 +28,14 @@
     "url": "git+https://github.com/bitcannon-org/monodriver.git"
   },
   "scripts": {
-    "test": "istanbul cover _mocha -- test test/adapters"
+    "test": "istanbul cover _mocha --report lcovonly -- ./test ./test/adapters && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage"
   },
   "dependencies": {},
   "devDependencies": {
+    "coveralls": "^2.11.6",
     "istanbul": "^0.4.2",
     "mocha": "^2.3.4",
+    "mocha-lcov-reporter": "^1.0.0",
     "should": "^8.1.1"
   }
 }
